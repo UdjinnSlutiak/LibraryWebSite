@@ -1,0 +1,81 @@
+﻿@model Lab_4.Models.GetViewModel
+
+@{
+    ViewData["Title"] = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Students</h1>
+@if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+{
+    <p>
+        <a asp-action="AddStudentG">Add New Student</a>
+    </p>
+}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.FatherName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.Group)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.Faculty)
+                </th>
+                @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+                {
+                    <th>
+                        @Html.DisplayNameFor(model => model.Student.Login)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Student.Password)
+                    </th>
+                        <th></th>
+                }
+                </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Students)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty)
+                </td>
+                @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Login)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        <a asp-action="EditStudent" asp-route-id="@item.UserId">Edit</a> |
+                        <a asp-action="StudentInfo" asp-route-id="@item.UserId">Details</a> |
+                        <a asp-action="DeleteStudent" asp-route-id="@item.UserId">Delete</a>
+                    </td>
+                }
+            </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Lab_4.Models.GetViewModel
+
+<div class="text-center">
+    <h2>Welcome To Our Library Web-Site</h2>
+    <hr />
+    <div class="text-left">
+        <p>Here you can do several things:</p>
+        <ul class="text-left">
+            <li><b>See</b> lists of <a asp-action="Books">books</a>, <a asp-action="Students">students</a> and <a asp-action="Administrators">administrators</a>;</li>
+            @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+            {
+                <li><b>Add</b> new <a asp-action="AddBookG">books</a>, <a asp-action="AddStudentG">students</a> and <a asp-action="AddAdministratorG">administrators</a>;</li>
+            }
+            else
+            {
+                <li><b>Add</b> new books, students and administrators;</li>
+            }
+            <li><b>Take</b> or <b>return</b> books.</li>
+        </ul>
+    </div>
+</div>

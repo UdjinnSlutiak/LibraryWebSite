@@ -1,0 +1,64 @@
+﻿@model Lab_4.Models.GetViewModel
+
+
+@{
+    ViewData["Title"] = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Books</h1>
+@if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+{
+    <p>
+        <a asp-action="AddBookG">Add New Book</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.PageCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.TotalCount)
+            </th>
+            @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+            {
+                <th></th>
+            }
+            </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Books)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PageCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCount)
+            </td>
+            @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+            {
+                <td>
+                    <a asp-action="EditBook" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="BookInfo" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="DeleteBook" asp-route-id="@item.Id">Delete</a>
+                </td>
+            }
+            </tr>
+        }
+    </tbody>
+</table>

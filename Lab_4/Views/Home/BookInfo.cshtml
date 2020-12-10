@@ -1,0 +1,42 @@
+﻿@model Lab_4.Models.Book
+
+@{
+    ViewData["Title"] = "BookInfo";
+    Layout = "~/Views/Home/Authorization_Layout.cshtml";
+}
+
+<h1>Book Information</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PageCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PageCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalCount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditBook" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Books">Back to Books List</a>
+</div>

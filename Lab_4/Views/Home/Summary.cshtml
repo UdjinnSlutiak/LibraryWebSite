@@ -1,0 +1,66 @@
+﻿@model Lab_4.Models.AddBtSViewModel
+
+@{
+    ViewData["Title"] = "My Books";
+    Layout = "~/Views/Home/Authorization_Layout.cshtml";
+}
+
+<div><p>Books that @Model.Student.LastName @Model.Student.FirstName already took:</p></div>
+<div>
+    <table class="table table-striped table-bordered table-sm">
+        <tr>
+            <th class="text-right">Book Name</th>
+            <th></th>
+        </tr>
+        @foreach (var book in Model.TakenBooks)
+        {
+            <tr>
+                <td>
+                    @book.Name
+                </td>
+                <td>
+                    <form asp-action="ReturnBook" asp-route-studentId="@Model.Student.UserId" asp-route-bookId="@book.Id" method="post">
+                        <button class="btn btn-primary" type="submit">
+                            Return
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div><p>Available Books:</p></div>
+<div>
+    <table class="table table-striped table-bordered table-sm">
+        <tr>
+            <th class="text-right">Book Name</th>
+            <th class="text-right">Available Count</th>
+            <th></th>
+        </tr>
+        @foreach (var book in Model.AvailableBooks)
+        {
+            <tr>
+                <td>
+                    @book.Name
+                </td>
+                <td>
+                    @book.AvailableCount / @book.TotalCount
+                </td>
+                <td>
+                    @if (book.IsAvailable)
+                    {
+                        <form asp-action="TakeBook" asp-route-studentId="@Model.Student.UserId" asp-route-bookId="@book.Id" method="post">
+                            <button class="btn btn-primary" type="submit">
+                                Take
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        @:Unavailable
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

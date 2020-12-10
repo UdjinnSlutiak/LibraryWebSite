@@ -1,0 +1,75 @@
+﻿@model Lab_4.Models.GetViewModel
+
+@{
+    ViewData["Title"] = "Administrators";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Administrators</h1>
+@if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+{
+    <p>
+        <a asp-action="AddAdministratorG">Add New Administrator</a>
+    </p>
+}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Administrator.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Administrator.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Administrator.FatherName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Administrator.Position)
+                </th>
+                @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+                {
+                    <th>
+                        @Html.DisplayNameFor(model => model.Administrator.Login)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Administrator.Password)
+                    </th>
+                    <th></th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Administrators)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Login)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        <a asp-action="EditAdministrator" asp-route-id="@item.UserId">Edit</a> |
+                        <a asp-action="AdministratorInfo" asp-route-id="@item.UserId">Details</a> |
+                        <a asp-action="DeleteAdministrator" asp-route-id="@item.UserId">Delete</a>
+                    </td>
+                }
+            </tr>
+            }
+        </tbody>
+    </table>

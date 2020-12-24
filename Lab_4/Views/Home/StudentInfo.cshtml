@@ -1,11 +1,11 @@
 ﻿@model Lab_4.Models.Student
 
 @{
-    ViewData["Title"] = "StudentInfo";
+    ViewData["Title"] = ViewData["Info"];
     Layout = "~/Views/Home/Authorization_Layout.cshtml";
 }
 
-<h1>Student Information</h1>
+<h1>@ViewData["StudentInfo"]</h1>
 
 <div>
     <hr />
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditStudent" asp-route-id="@Model.UserId">Edit</a> |
-    <a asp-action="Students">Back to Students List</a>
+    <a asp-action="EditStudent" asp-route-id="@Model.UserId">@ViewData["Edit"]</a> |
+    <a asp-action="Students">@ViewData["BackToStudents"]</a>
 </div>

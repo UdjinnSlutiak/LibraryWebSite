@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Library</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Library</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@ViewData["Library"]</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,13 +21,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Books">Books</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Books">@ViewData["Books"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Students">Students</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Students">@ViewData["Students"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Administrators">Administrators</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Administrators">@ViewData["Admins"]</a>
                         </li>
                         @if (Model.User.Type == Lab_4.Models.User.UserType.Student)
                         {
@@ -35,14 +35,17 @@
                                 <a class="nav-link text-white">|</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Summary" asp-route-studentId="@Model.User.UserId">My Books</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Summary" asp-route-studentId="@Model.User.UserId">@ViewData["MyBooks"]</a>
                             </li>
                         }
                     </ul>
                 </div>
                 <div class="xx">
+                    @await Html.PartialAsync("_SelectLanguagePartial");
+                </div>
+                <div class="xx">
                     <a class="nav-link text-white">@Model.User.LastName @Model.User.FirstName</a>
-                    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="LogOut">@ViewData["LogOut"]</a>
                 </div>
             </div>
         </nav>
@@ -55,7 +58,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Library - Sdelano by <a href="https://www.instagram.com/eugene_johnovych/?hl=uk" class="btn-danger" target="_blank">eugene_johnovych</a> (feat. <a href="https://www.instagram.com/stelizhenets/?hl=uk" class="btn-danger" target="_blank">stelizhenets</a>)
+            &copy; 2020 - @ViewData["Library"] - Sdelano by <a href="https://www.instagram.com/eugene_johnovych/?hl=uk" class="btn-danger" target="_blank">eugene_johnovych</a> (feat. <a href="https://www.instagram.com/stelizhenets/?hl=uk" class="btn-danger" target="_blank">stelizhenets</a>)
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

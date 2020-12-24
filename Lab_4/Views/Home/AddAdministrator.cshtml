@@ -1,11 +1,11 @@
 ﻿@model Lab_4.Models.AddAdministratorViewModel
 
 @{
-    ViewData["Title"] = "AddAdministrator";
+    ViewData["Title"] = ViewData["Adding"];
     Layout = "~/Views/AddAdministrator_Layout.cshtml";
 }
 
-<h1>Adding New Administrator</h1>
+<h1>@ViewData["AddAdminHeader"]</h1>
 
 <hr />
 <div class="row">
@@ -43,14 +43,14 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@ViewData["CreateButton"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Administrators">Back to Administrators List</a>
+    <a asp-action="Administrators">@ViewData["BackToAdmins"]</a>
 </div>
 
 @section Scripts {

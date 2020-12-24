@@ -1,15 +1,15 @@
 ﻿@model Lab_4.Models.GetViewModel
 
 @{
-    ViewData["Title"] = "Students";
+    ViewData["Title"] = ViewData["Students"];
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Students</h1>
+<h1>@ViewData["Students"]</h1>
 @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
 {
     <p>
-        <a asp-action="AddStudentG">Add New Student</a>
+        <a asp-action="AddStudentG">@ViewData["AddStudent"]</a>
     </p>
 }
     <table class="table">
@@ -70,9 +70,9 @@
                         @Html.DisplayFor(modelItem => item.Password)
                     </td>
                     <td>
-                        <a asp-action="EditStudent" asp-route-id="@item.UserId">Edit</a> |
-                        <a asp-action="StudentInfo" asp-route-id="@item.UserId">Details</a> |
-                        <a asp-action="DeleteStudent" asp-route-id="@item.UserId">Delete</a>
+                        <a asp-action="EditStudent" asp-route-id="@item.UserId">@ViewData["Edit"]</a> |
+                        <a asp-action="StudentInfo" asp-route-id="@item.UserId">@ViewData["Info"]</a> |
+                        <a asp-action="DeleteStudent" asp-route-id="@item.UserId">@ViewData["Delete"]</a>
                     </td>
                 }
             </tr>

@@ -1,13 +1,13 @@
 ﻿@model Lab_4.Models.Administrator
 
 @{
-    ViewData["Title"] = "DeleteAdministrator";
+    ViewData["Title"] = ViewData["Deleting"];
     Layout = "~/Views/Home/Authorization_Layout.cshtml";
 }
 
-<h1>Administrator Deleting</h1>
+<h1>@ViewData["AdminDeleting"]</h1>
 
-<h3>Are you sure you want to delete this administrator?</h3>
+<h3>@ViewData["AdminDeletingQuest"]</h3>
 <div>
     <hr />
     <dl class="row">
@@ -58,6 +58,6 @@
     <form asp-action="DeleteAdministrator">
         <input type="hidden" asp-for="UserId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Administrators">Back to Administrators List</a>
+        <a asp-action="Administrators">@ViewData["BackToAdmins"]</a>
     </form>
 </div>

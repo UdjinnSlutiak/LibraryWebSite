@@ -1,15 +1,15 @@
 ﻿@model Lab_4.Models.AddBtSViewModel
 
 @{
-    ViewData["Title"] = "My Books";
+    ViewData["Title"] = ViewData["MyBooks"];
     Layout = "~/Views/Home/Authorization_Layout.cshtml";
 }
 
-<div><p>Books that @Model.Student.LastName @Model.Student.FirstName already took:</p></div>
+<div><p>@ViewData["BooksThat"] @Model.Student.LastName @Model.Student.FirstName @ViewData["AlreadyTook"]</p></div>
 <div>
     <table class="table table-striped table-bordered table-sm">
         <tr>
-            <th class="text-right">Book Name</th>
+            <th class="text-right">@ViewData["BookName"]</th>
             <th></th>
         </tr>
         @foreach (var book in Model.TakenBooks)
@@ -21,7 +21,7 @@
                 <td>
                     <form asp-action="ReturnBook" asp-route-studentId="@Model.Student.UserId" asp-route-bookId="@book.Id" method="post">
                         <button class="btn btn-primary" type="submit">
-                            Return
+                            @ViewData["Return"]
                         </button>
                     </form>
                 </td>
@@ -29,12 +29,12 @@
         }
     </table>
 </div>
-<div><p>Available Books:</p></div>
+<div><p>@ViewData["AvailableBooks"]</p></div>
 <div>
     <table class="table table-striped table-bordered table-sm">
         <tr>
-            <th class="text-right">Book Name</th>
-            <th class="text-right">Available Count</th>
+            <th class="text-right">@ViewData["BookName"]</th>
+            <th class="text-right">@ViewData["Count"]</th>
             <th></th>
         </tr>
         @foreach (var book in Model.AvailableBooks)
@@ -51,7 +51,7 @@
                     {
                         <form asp-action="TakeBook" asp-route-studentId="@Model.Student.UserId" asp-route-bookId="@book.Id" method="post">
                             <button class="btn btn-primary" type="submit">
-                                Take
+                                @ViewData["Take"]
                             </button>
                         </form>
                     }

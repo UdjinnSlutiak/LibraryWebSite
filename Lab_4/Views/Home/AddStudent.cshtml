@@ -1,11 +1,11 @@
 ﻿@model Lab_4.Models.AddStudentViewModel
 
 @{
-    ViewData["Title"] = "AddStudent";
+    ViewData["Title"] = ViewData["Adding"];
     Layout = "~/Views/AddStudent_Layout.cshtml";
 }
 
-<h1>Adding New Student</h1>
+<h1>@ViewData["AddStudentHeader"]</h1>
 
 <hr />
 <div class="row">
@@ -48,14 +48,14 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@ViewData["CreateButton"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Students">Back to Students List</a>
+    <a asp-action="Students">@ViewData["BackToStudents"]</a>
 </div>
 
 @section Scripts {

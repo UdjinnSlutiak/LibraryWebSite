@@ -1,11 +1,11 @@
 ﻿@model Lab_4.Models.Administrator
 
 @{
-    ViewData["Title"] = "AdministratorInfo";
+    ViewData["Title"] = ViewData["Info"];
     Layout = "~/Views/Home/Authorization_Layout.cshtml";
 }
 
-<h1>Administrator Information</h1>
+<h1>@ViewData["AdminInfoHeader"]</h1>
 
 <div>
     <hr />
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditAdministrator" asp-route-id="@Model.UserId">Edit</a> |
-    <a asp-action="Administrators">Back to Administrators List</a>
+    <a asp-action="EditAdministrator" asp-route-id="@Model.UserId">@ViewData["Edit"]</a> |
+    <a asp-action="Administrators">@ViewData["BackToAdmins"]</a>
 </div>

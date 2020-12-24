@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace Lab_4
 {
@@ -28,6 +30,26 @@ namespace Lab_4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("de"),
+                    new CultureInfo("ru")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("ru");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
+            services.AddControllersWithViews()
+                .AddDataAnnotationsLocalization()
+                .AddViewLocalization();
+
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+
             services.AddControllersWithViews();
             services.AddDbContext<LibraryDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
@@ -40,13 +62,21 @@ namespace Lab_4
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseSession();
-            /*app.Run(HttpContext => 
-                {
-                    if (HttpContext.Session.Keys.Contains("id"))
-                        ;
-                    else
 
-                });*/
+
+            var supportedCultures = new[]
+            {
+                new CultureInfo("uk"),
+                new CultureInfo("en"),
+                new CultureInfo("ru")
+            };
+
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("uk"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
 
             if (env.IsDevelopment())
             {

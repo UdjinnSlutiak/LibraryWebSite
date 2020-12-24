@@ -1,11 +1,11 @@
 ﻿@model Lab_4.Models.Book
 
 @{
-    ViewData["Title"] = "BookInfo";
+    ViewData["Title"] = ViewData["Info"];
     Layout = "~/Views/Home/Authorization_Layout.cshtml";
 }
 
-<h1>Book Information</h1>
+<h1>@ViewData["BookInfoHeader"]</h1>
 
 <div>
     <hr />
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditBook" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Books">Back to Books List</a>
+    <a asp-action="EditBook" asp-route-id="@Model.Id">@ViewData["Edit"]</a> |
+    <a asp-action="Books">@ViewData["BackToBooks"]</a>
 </div>

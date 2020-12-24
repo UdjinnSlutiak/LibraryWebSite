@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAdmin" xml:space="preserve">
+    <value>Створити Нового Адміністратора</value>
+  </data>
+  <data name="AddAdminHeader" xml:space="preserve">
+    <value>Створення Нового Адміністратора</value>
+  </data>
+  <data name="AddBook" xml:space="preserve">
+    <value>Створити книгу</value>
+  </data>
+  <data name="AddBookHeader" xml:space="preserve">
+    <value>Створення Нової Книги</value>
+  </data>
+  <data name="Adding" xml:space="preserve">
+    <value>Створення</value>
+  </data>
+  <data name="AddStudent" xml:space="preserve">
+    <value>Створити Нового Студента</value>
+  </data>
+  <data name="AddStudentHeader" xml:space="preserve">
+    <value>Створення Нового Студента</value>
+  </data>
+  <data name="AdminDeleting" xml:space="preserve">
+    <value>Видалення Адміністратора</value>
+  </data>
+  <data name="AdminDeletingQuest" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити цього адміністратора?</value>
+  </data>
+  <data name="AdminEditing" xml:space="preserve">
+    <value>Редагування Адміністратора</value>
+  </data>
+  <data name="AdminInfoHeader" xml:space="preserve">
+    <value>Інформація Про Адміністратора</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>Адміністратори</value>
+  </data>
+  <data name="AdminsHeader" xml:space="preserve">
+    <value>Адміністратори</value>
+  </data>
+  <data name="AdminsTitle" xml:space="preserve">
+    <value>Адміністратори</value>
+  </data>
+  <data name="AlreadyTook" xml:space="preserve">
+    <value>уже взяв:</value>
+  </data>
+  <data name="Auth" xml:space="preserve">
+    <value>Авторизація</value>
+  </data>
+  <data name="AvailableBooks" xml:space="preserve">
+    <value>Доступні Книги:</value>
+  </data>
+  <data name="BackToAdmins" xml:space="preserve">
+    <value>Назад До Списку Адміністраторів</value>
+  </data>
+  <data name="BackToBooks" xml:space="preserve">
+    <value>Назад До Списку Книг</value>
+  </data>
+  <data name="BackToStudents" xml:space="preserve">
+    <value>Назад До Списку Студентів</value>
+  </data>
+  <data name="BookDeleting" xml:space="preserve">
+    <value>Видалення книги</value>
+  </data>
+  <data name="BookDeletingQuest" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити цю книгу?</value>
+  </data>
+  <data name="BookEditing" xml:space="preserve">
+    <value>Редагування Книги</value>
+  </data>
+  <data name="BookInfoHeader" xml:space="preserve">
+    <value>Інформація Про Книгу</value>
+  </data>
+  <data name="BookName" xml:space="preserve">
+    <value>Назва Книги</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="BooksThat" xml:space="preserve">
+    <value>Книги, які</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Кількість</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Створити</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="Deleting" xml:space="preserve">
+    <value>Видалення</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Редагування</value>
+  </data>
+  <data name="HereYouCan" xml:space="preserve">
+    <value>Тут ви можете виконувати наступні дії:</value>
+  </data>
+  <data name="IndAdd" xml:space="preserve">
+    <value>Створювати</value>
+  </data>
+  <data name="IndAdmins" xml:space="preserve">
+    <value>адміністраторів</value>
+  </data>
+  <data name="IndAnd" xml:space="preserve">
+    <value>і</value>
+  </data>
+  <data name="IndBook" xml:space="preserve">
+    <value>книг</value>
+  </data>
+  <data name="IndBooks" xml:space="preserve">
+    <value>книг</value>
+  </data>
+  <data name="IndexTitle" xml:space="preserve">
+    <value>Домашня сторінка</value>
+  </data>
+  <data name="IndNew" xml:space="preserve">
+    <value>нові</value>
+  </data>
+  <data name="IndReturn" xml:space="preserve">
+    <value>повертати</value>
+  </data>
+  <data name="IndStuds" xml:space="preserve">
+    <value>студентів</value>
+  </data>
+  <data name="IndTake" xml:space="preserve">
+    <value>Брати</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Інформація</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>Бібліотека</value>
+  </data>
+  <data name="ListsOf" xml:space="preserve">
+    <value>списки</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Увійти</value>
+  </data>
+  <data name="Loginn" xml:space="preserve">
+    <value>Логін:</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Вийти</value>
+  </data>
+  <data name="MyBooks" xml:space="preserve">
+    <value>Мої Книги</value>
+  </data>
+  <data name="navBooks" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="navStudents" xml:space="preserve">
+    <value>Студенти</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>або</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Повернути</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="StudentDeleting" xml:space="preserve">
+    <value>Видалення студента</value>
+  </data>
+  <data name="StudentDeletingQuest" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити цього студента?</value>
+  </data>
+  <data name="StudentEditing" xml:space="preserve">
+    <value>Редагування Студента</value>
+  </data>
+  <data name="StudentInfo" xml:space="preserve">
+    <value>Інформація Про Студента</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>Студенти</value>
+  </data>
+  <data name="Take" xml:space="preserve">
+    <value>Взяти</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Переглядати</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Ласкаво Просимо На Сайт Нашої Бібліотеки</value>
+  </data>
+</root>

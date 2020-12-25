@@ -123,7 +123,8 @@ namespace Lab_4.Controllers
         public IActionResult Administrators(GetViewModel model)
         {
             ViewData["Admins"] = _localizer["Admins"];
-            ViewData["AddAmin"] = _localizer["AddAdmin"];
+            ViewData["AddAdmin"] = _localizer["AddAdmin"];
+            ViewData["AdminsHeader"] = _localizer["AdminsHeader"];
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["Info"] = _localizer["Info"];
             ViewData["Delete"] = _localizer["Delete"];

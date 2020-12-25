@@ -34,12 +34,12 @@ namespace Lab_4
             {
                 var supportedCultures = new[]
                 {
+                    new CultureInfo("uk"),
                     new CultureInfo("en"),
-                    new CultureInfo("de"),
                     new CultureInfo("ru")
                 };
 
-                options.DefaultRequestCulture = new RequestCulture("ru");
+                options.DefaultRequestCulture = new RequestCulture("uk");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });

@@ -17,11 +17,11 @@
             <li><b>@ViewData["Watch"]</b> @ViewData["ListsOf"] <a asp-action="Books">@ViewData["IndBooks"]</a>, <a asp-action="Students">@ViewData["IndStuds"]</a> @ViewData["IndAnd"] <a asp-action="Administrators">@ViewData["IndAdmins"]</a>;</li>
             @if (Model.User.Type == Lab_4.Models.User.UserType.Administrator)
             {
-                <li><b>@ViewData["IndAdd"]</b> @ViewData["IndNew"] <a asp-action="AddBookG">@ViewData["Books"]</a>, <a asp-action="AddStudentG">@ViewData["IndStuds"]</a> @ViewData["IndAnd"] <a asp-action="AddAdministratorG">@ViewData["IndAdmins"]</a>;</li>
+                <li><b>@ViewData["IndAdd"]</b> @ViewData["IndNew"] <a asp-action="AddBookG">@ViewData["IndBooks"]</a>, <a asp-action="AddStudentG">@ViewData["IndStuds"]</a> @ViewData["IndAnd"] <a asp-action="AddAdministratorG">@ViewData["IndAdmins"]</a>;</li>
             }
             else
             {
-                <li><b>@ViewData["IndAdd"]</b> @ViewData["IndNew"] @ViewData["IndBook"], @ViewData["IndStuds"] @ViewData["IndAnd"] @ViewData["IndAdmins"];</li>
+                <li><b>@ViewData["IndAdd"]</b> @ViewData["IndNew"] @ViewData["IndBooks"], @ViewData["IndStuds"] @ViewData["IndAnd"] @ViewData["IndAdmins"];</li>
             }
             <li><b>@ViewData["IndTake"]</b> @ViewData["Or"] <b>@ViewData["IndReturn"]</b> @ViewData["IndBook"].</li>
         </ul>

@@ -65,6 +65,14 @@ namespace Lab_4.Controllers
             ViewData["Or"] = _localizer["Or"];
             ViewData["IndReturn"] = _localizer["IndReturn"];
             ViewData["IndBook"] = _localizer["IndBook"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["navBooks"] = _localizer["navBooks"];
+            ViewData["navStudents"] = _localizer["navStudents"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             return View(model);
         }
@@ -77,6 +85,14 @@ namespace Lab_4.Controllers
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["Info"] = _localizer["Info"];
             ViewData["Delete"] = _localizer["Delete"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["navBooks"] = _localizer["navBooks"];
+            ViewData["navStudents"] = _localizer["navStudents"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             model.Books = dbContext.Books.AsEnumerable<Book>();
             return View(model);
@@ -90,6 +106,14 @@ namespace Lab_4.Controllers
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["Info"] = _localizer["Info"];
             ViewData["Delete"] = _localizer["Delete"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["navBooks"] = _localizer["navBooks"];
+            ViewData["navStudents"] = _localizer["navStudents"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             model.Students = dbContext.Students.AsEnumerable<Student>();
             return View(model);
@@ -98,11 +122,19 @@ namespace Lab_4.Controllers
         [HttpGet]
         public IActionResult Administrators(GetViewModel model)
         {
-            ViewData["Students"] = _localizer["Students"];
-            ViewData["AddStudent"] = _localizer["AddStudent"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["AddAmin"] = _localizer["AddAdmin"];
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["Info"] = _localizer["Info"];
             ViewData["Delete"] = _localizer["Delete"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["navBooks"] = _localizer["navBooks"];
+            ViewData["navStudents"] = _localizer["navStudents"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             model.Administrators = dbContext.Administrators.AsEnumerable<Administrator>();
             return View(model);
@@ -148,6 +180,14 @@ namespace Lab_4.Controllers
             ViewData["AddBookHeader"] = _localizer["AddBookHeader"];
             ViewData["CreateButton"] = _localizer["CreateButton"];
             ViewData["BackToBooks"] = _localizer["BackToBooks"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["Books"] = _localizer["Books"];
+            ViewData["Students"] = _localizer["Students"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             return View("AddBook", model);
         }
@@ -174,6 +214,14 @@ namespace Lab_4.Controllers
             ViewData["AddStudentHeader"] = _localizer["AddStudentHeader"];
             ViewData["CreateButton"] = _localizer["CreateButton"];
             ViewData["BackToStudents"] = _localizer["BackToStudents"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["Books"] = _localizer["Books"];
+            ViewData["Students"] = _localizer["Students"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             return View("AddStudent", model);
         }
@@ -204,6 +252,14 @@ namespace Lab_4.Controllers
             ViewData["AddAdminHeader"] = _localizer["AddAdminHeader"];
             ViewData["CreateButton"] = _localizer["CreateButton"];
             ViewData["BackToAdmins"] = _localizer["BackToAdmins"];
+            ViewData["Library"] = _localizer["Library"];
+            ViewData["Books"] = _localizer["Books"];
+            ViewData["Students"] = _localizer["Students"];
+            ViewData["Admins"] = _localizer["Admins"];
+            ViewData["MyBooks"] = _localizer["MyBooks"];
+            ViewData["LogOut"] = _localizer["LogOut"];
+            ViewData["Language"] = _localizer["Language"];
+
             model.User = GetUser();
             return View("AddAdministrator", model);
         }
@@ -237,6 +293,7 @@ namespace Lab_4.Controllers
             ViewData["AvailableBooks"] = _localizer["AvailableBooks"];
             ViewData["Count"] = _localizer["Count"];
             ViewData["Take"] = _localizer["Take"];
+            ViewData["Library"] = _localizer["Library"];
 
             var student = dbContext.Students.FirstOrDefault(s => s.UserId == studentId);
             //List<Book> TakenBooks = dbContext.Students.Where(s => s.Id == studentId).Include(b => b.Books).FirstOrDefault();
@@ -289,6 +346,8 @@ namespace Lab_4.Controllers
             ViewData["BookEditing"] = _localizer["BookEditing"];
             ViewData["SaveButton"] = _localizer["SaveButton"];
             ViewData["BackToBooks"] = _localizer["BackToBooks"];
+            ViewData["Library"] = _localizer["Library"];
+
             Book book = dbContext.Books.Find(Id);
             return View(book);
         }
@@ -309,6 +368,8 @@ namespace Lab_4.Controllers
             ViewData["BookDeletingQuest"] = _localizer["BookDeletingQuest"];
             ViewData["Delete"] = _localizer["Delete"];
             ViewData["BackToBooks"] = _localizer["BackToBooks"];
+            ViewData["Library"] = _localizer["Library"];
+
             Book book = dbContext.Books.Find(Id);
             return View(book);
         }
@@ -328,6 +389,8 @@ namespace Lab_4.Controllers
             ViewData["BookInfoHeader"] = _localizer["BookInfoHeader"];
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["BackToBooks"] = _localizer["BackToBooks"];
+            ViewData["Library"] = _localizer["Library"];
+
             Book book = dbContext.Books.Find(Id);
             return View(book);
         }
@@ -342,6 +405,8 @@ namespace Lab_4.Controllers
             ViewData["StudentEditing"] = _localizer["StudentEditing"];
             ViewData["SaveButton"] = _localizer["SaveButton"];
             ViewData["BackToStudents"] = _localizer["BackToStudents"];
+            ViewData["Library"] = _localizer["Library"];
+
             Student student = dbContext.Students.Find(Id);
             return View(student);
         }
@@ -362,6 +427,8 @@ namespace Lab_4.Controllers
             ViewData["StudentDeletingQuest"] = _localizer["StudentDeletingQuest"];
             ViewData["Delete"] = _localizer["Delete"];
             ViewData["BackToStudents"] = _localizer["BackToStudents"];
+            ViewData["Library"] = _localizer["Library"];
+
             Student student = dbContext.Students.Find(Id);
             return View(student);
         }
@@ -381,6 +448,8 @@ namespace Lab_4.Controllers
             ViewData["StudentInfoHeader"] = _localizer["StudentInfoHeader"];
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["BackToStudents"] = _localizer["BackToStudents"];
+            ViewData["Library"] = _localizer["Library"];
+
             Student student = dbContext.Students.Find(Id);
             return View(student);
         }
@@ -395,6 +464,8 @@ namespace Lab_4.Controllers
             ViewData["AdminEditing"] = _localizer["AdminEditing"];
             ViewData["SaveButton"] = _localizer["SaveButton"];
             ViewData["BackToAdmins"] = _localizer["BackToAdmins"];
+            ViewData["Library"] = _localizer["Library"];
+
             Administrator Administrator = dbContext.Administrators.Find(Id);
             return View(Administrator);
         }
@@ -415,6 +486,8 @@ namespace Lab_4.Controllers
             ViewData["AdminDeletingQuest"] = _localizer["AdminDeletingQuest"];
             ViewData["Delete"] = _localizer["Delete"];
             ViewData["BackToAdmins"] = _localizer["BackToAdmins"];
+            ViewData["Library"] = _localizer["Library"];
+
             Administrator Administrator = dbContext.Administrators.Find(Id);
             return View(Administrator);
         }
@@ -434,6 +507,8 @@ namespace Lab_4.Controllers
             ViewData["AdminInfoHeader"] = _localizer["AdminInfoHeader"];
             ViewData["Edit"] = _localizer["Edit"];
             ViewData["BackToAdmins"] = _localizer["BackToAdmins"];
+            ViewData["Library"] = _localizer["Library"];
+
             Administrator Administrator = dbContext.Administrators.Find(Id);
             return View(Administrator);
         }

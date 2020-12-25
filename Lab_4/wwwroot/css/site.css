@@ -11,15 +11,27 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.custom-select {
+    background-color: blanchedalmond;
+}
+
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: coral;
+}
+
+.form-control {
+    background-color: #fff8ec;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #c1554d;
+    border-color: #c1554d;
+}
+
+nav {
+    background-color: #a46f5b;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -63,8 +75,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: blanchedalmond;
 }
 .footer {
   position: absolute;

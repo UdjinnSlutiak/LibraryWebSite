@@ -117,7 +117,202 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="navLib" xml:space="preserve">
+  <data name="AddAdmin" xml:space="preserve">
+    <value>Create New Administrator</value>
+  </data>
+  <data name="AddAdminHeader" xml:space="preserve">
+    <value>Creating New Administrator</value>
+  </data>
+  <data name="AddBook" xml:space="preserve">
+    <value>Create New Book</value>
+  </data>
+  <data name="AddBookHeader" xml:space="preserve">
+    <value>Creating New Book</value>
+  </data>
+  <data name="Adding" xml:space="preserve">
+    <value>Creating</value>
+  </data>
+  <data name="AddStudent" xml:space="preserve">
+    <value>Create New Student</value>
+  </data>
+  <data name="AddStudentHeader" xml:space="preserve">
+    <value>Creating New Student</value>
+  </data>
+  <data name="AdminDeleting" xml:space="preserve">
+    <value>Deleting Administrator</value>
+  </data>
+  <data name="AdminDeletingQuest" xml:space="preserve">
+    <value>Are you sure you want to delete this administrator?</value>
+  </data>
+  <data name="AdminEditing" xml:space="preserve">
+    <value>Editing Administrator</value>
+  </data>
+  <data name="AdminInfoHeader" xml:space="preserve">
+    <value>Administrator Details</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>Administrators</value>
+  </data>
+  <data name="AdminsHeader" xml:space="preserve">
+    <value>Administrators</value>
+  </data>
+  <data name="AdminsTitle" xml:space="preserve">
+    <value>Administrators</value>
+  </data>
+  <data name="AlreadyTook" xml:space="preserve">
+    <value>already took:</value>
+  </data>
+  <data name="Auth" xml:space="preserve">
+    <value>Authorization</value>
+  </data>
+  <data name="AvailableBooks" xml:space="preserve">
+    <value>Available Books:</value>
+  </data>
+  <data name="BackToAdmins" xml:space="preserve">
+    <value>Back To Administrators List</value>
+  </data>
+  <data name="BackToBooks" xml:space="preserve">
+    <value>Back To Books List</value>
+  </data>
+  <data name="BackToStudents" xml:space="preserve">
+    <value>Back To Students List</value>
+  </data>
+  <data name="BookDeleting" xml:space="preserve">
+    <value>Book Deleting</value>
+  </data>
+  <data name="BookDeletingQuest" xml:space="preserve">
+    <value>Are you sure you want to delete this book?</value>
+  </data>
+  <data name="BookEditing" xml:space="preserve">
+    <value>Book Editing</value>
+  </data>
+  <data name="BookInfoHeader" xml:space="preserve">
+    <value>Book Information</value>
+  </data>
+  <data name="BookName" xml:space="preserve">
+    <value>Book Name</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="BooksThat" xml:space="preserve">
+    <value>Books that</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Deleting" xml:space="preserve">
+    <value>Deleting</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Editing</value>
+  </data>
+  <data name="HereYouCan" xml:space="preserve">
+    <value>Here you can do several things:</value>
+  </data>
+  <data name="IndAdd" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="IndAdmins" xml:space="preserve">
+    <value>administrators</value>
+  </data>
+  <data name="IndAnd" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="IndBook" xml:space="preserve">
+    <value>books</value>
+  </data>
+  <data name="IndBooks" xml:space="preserve">
+    <value>books</value>
+  </data>
+  <data name="IndexTitle" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="IndNew" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="IndReturn" xml:space="preserve">
+    <value>return</value>
+  </data>
+  <data name="IndStuds" xml:space="preserve">
+    <value>students</value>
+  </data>
+  <data name="IndTake" xml:space="preserve">
+    <value>Take</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Library" xml:space="preserve">
     <value>Library</value>
+  </data>
+  <data name="ListsOf" xml:space="preserve">
+    <value>lists</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="Loginn" xml:space="preserve">
+    <value>Login:</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="MyBooks" xml:space="preserve">
+    <value>My Books</value>
+  </data>
+  <data name="navBooks" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="navStudents" xml:space="preserve">
+    <value>Students</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="StudentDeleting" xml:space="preserve">
+    <value>Student Deleting</value>
+  </data>
+  <data name="StudentDeletingQuest" xml:space="preserve">
+    <value>Are you sure you want to delete this student?</value>
+  </data>
+  <data name="StudentEditing" xml:space="preserve">
+    <value>Student Editing</value>
+  </data>
+  <data name="StudentInfo" xml:space="preserve">
+    <value>Student Details</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>Students</value>
+  </data>
+  <data name="Take" xml:space="preserve">
+    <value>Take</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome To Our Library Web-Site</value>
   </data>
 </root>

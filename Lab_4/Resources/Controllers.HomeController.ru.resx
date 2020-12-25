@@ -117,7 +117,202 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="navLib" xml:space="preserve">
+  <data name="AddAdmin" xml:space="preserve">
+    <value>Создать Нового Администратора</value>
+  </data>
+  <data name="AddAdminHeader" xml:space="preserve">
+    <value>Создание Нового Администратора</value>
+  </data>
+  <data name="AddBook" xml:space="preserve">
+    <value>Создать Новою Книгу</value>
+  </data>
+  <data name="AddBookHeader" xml:space="preserve">
+    <value>Создание Новой Книги</value>
+  </data>
+  <data name="Adding" xml:space="preserve">
+    <value>Создание</value>
+  </data>
+  <data name="AddStudent" xml:space="preserve">
+    <value>Создать Нового Студента</value>
+  </data>
+  <data name="AddStudentHeader" xml:space="preserve">
+    <value>Создание Нового Студента</value>
+  </data>
+  <data name="AdminDeleting" xml:space="preserve">
+    <value>Удаление Администратора</value>
+  </data>
+  <data name="AdminDeletingQuest" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этого администратора?</value>
+  </data>
+  <data name="AdminEditing" xml:space="preserve">
+    <value>Редактирование Администратора</value>
+  </data>
+  <data name="AdminInfoHeader" xml:space="preserve">
+    <value>Информация Об Администраторе</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>Администраторы</value>
+  </data>
+  <data name="AdminsHeader" xml:space="preserve">
+    <value>Администраторы</value>
+  </data>
+  <data name="AdminsTitle" xml:space="preserve">
+    <value>Администраторы</value>
+  </data>
+  <data name="AlreadyTook" xml:space="preserve">
+    <value>уже взял:</value>
+  </data>
+  <data name="Auth" xml:space="preserve">
+    <value>Авторизация</value>
+  </data>
+  <data name="AvailableBooks" xml:space="preserve">
+    <value>Доступные Книги</value>
+  </data>
+  <data name="BackToAdmins" xml:space="preserve">
+    <value>Назад К Списку Администраторов</value>
+  </data>
+  <data name="BackToBooks" xml:space="preserve">
+    <value>Назад К Списку Книг</value>
+  </data>
+  <data name="BackToStudents" xml:space="preserve">
+    <value>Назад К Списку Студентов</value>
+  </data>
+  <data name="BookDeleting" xml:space="preserve">
+    <value>Удаление Книги</value>
+  </data>
+  <data name="BookDeletingQuest" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту книгу?</value>
+  </data>
+  <data name="BookEditing" xml:space="preserve">
+    <value>Редактирование Книги</value>
+  </data>
+  <data name="BookInfoHeader" xml:space="preserve">
+    <value>Информация О Книге</value>
+  </data>
+  <data name="BookName" xml:space="preserve">
+    <value>Название Книги</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="BooksThat" xml:space="preserve">
+    <value>Книги, которые</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Deleting" xml:space="preserve">
+    <value>Удаление</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Редактирование</value>
+  </data>
+  <data name="HereYouCan" xml:space="preserve">
+    <value>Здесь вы можете выполнять следующие действия:</value>
+  </data>
+  <data name="IndAdd" xml:space="preserve">
+    <value>Создавать</value>
+  </data>
+  <data name="IndAdmins" xml:space="preserve">
+    <value>администраторов</value>
+  </data>
+  <data name="IndAnd" xml:space="preserve">
+    <value>и</value>
+  </data>
+  <data name="IndBook" xml:space="preserve">
+    <value>книг</value>
+  </data>
+  <data name="IndBooks" xml:space="preserve">
+    <value>книги</value>
+  </data>
+  <data name="IndexTitle" xml:space="preserve">
+    <value>Домашняя страница</value>
+  </data>
+  <data name="IndNew" xml:space="preserve">
+    <value>новые</value>
+  </data>
+  <data name="IndReturn" xml:space="preserve">
+    <value>вернуть</value>
+  </data>
+  <data name="IndStuds" xml:space="preserve">
+    <value>студентов</value>
+  </data>
+  <data name="IndTake" xml:space="preserve">
+    <value>Брать</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Library" xml:space="preserve">
     <value>Библиотека</value>
+  </data>
+  <data name="ListsOf" xml:space="preserve">
+    <value>списки</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Loginn" xml:space="preserve">
+    <value>Логин:</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="MyBooks" xml:space="preserve">
+    <value>Мои Книги</value>
+  </data>
+  <data name="navBooks" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="navStudents" xml:space="preserve">
+    <value>Студенты</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>или</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Вернуть</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="StudentDeleting" xml:space="preserve">
+    <value>Удаление студента</value>
+  </data>
+  <data name="StudentDeletingQuest" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этого студента?</value>
+  </data>
+  <data name="StudentEditing" xml:space="preserve">
+    <value>Редактирование студента</value>
+  </data>
+  <data name="StudentInfo" xml:space="preserve">
+    <value>Информация О Студенте</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>Студенты</value>
+  </data>
+  <data name="Take" xml:space="preserve">
+    <value>Взять</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Просматривать</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Добро Пожаловать На Сайт Нашей Библиотеки</value>
   </data>
 </root>
